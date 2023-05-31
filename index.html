@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .selected {
+        background: blue;
+      }
+         
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav></nav>
+    </header>
+
+    <section>
+      <aside class="aside"></aside>
+      <main class="main">
+        <div class="main-container">
+          <h2>Replace card</h2>
+          <hr />
+
+          <div class="card-container">
+            <div class="card-change">
+              <div class="existing-card">
+                <h3>Replace with existing image card</h3>
+                <img src="images/Group 153423-1.png" alt="image" />
+              </div>
+              <div class="replace-card">
+                <h3>Replace with original card</h3>
+                <img src="images/Group 153423-2.png" alt="image" />
+              </div>
+            </div>
+
+            <div class="personalise-card">
+              <h2>Personalise your card</h2>
+              <div class="filter-tab">
+                <a href="#"> All </a>
+                <a href="#"> Art </a>
+                <a href="#"> Abstract </a>
+                <a href="#"> Architecture </a>
+                <a href="#"> People </a>
+                <a href="#"> Sports </a>
+                <a href="#"> Travel </a>
+              </div>
+
+              <div class="all-card">
+                <img src="images/Group 153423-1.png" class="img" />
+                <img src="images/Group 153423.png" class="img" />
+                <img src="images/Group 153428-2.png" class="img" />
+                <img src="images/Group 153428.png" class="img" />
+                <img src="images/Group 153428-2.png" class="img" />
+                <img src="images/Group 153428-2.png" class="img" />
+                <img src="images/Group 153429.png" class="img" />
+                <img src="images/Group 153429-1.png" class="img" />
+              </div>
+            </div>
+          </div>
+
+          <div class="proceed-tab">
+            <a href=""> <i class="bx bx-arrow-back"></i> Back</a>
+
+            <button onclick="showimagedata()">Proceed</button>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <script>
+
+
+
+    
+const imageCards = document.querySelectorAll(".img");
+
+
+let caert = `background: 'red'; border:"red"; width: 20rem;`
+
+imageCards.forEach((card) => {
+    card.addEventListener('click', () => {
+        imageCards.forEach((item) => {
+            item.classList.remove("selected")
+            // item.class = "img"
+        })
+        card.classList.add("selected") 
+        // card.class = "img selected"
+
+    })
+})
+
+  
+    </script>
+  </body>
+</html>
